@@ -2,17 +2,16 @@
 #include <iostream>
 #include <cmath>
 int main() {
-    float x, a, c, f, z, y;
-    unsigned int zint;
+    float x, a, c, f, y;
+    int z;
     std::cout << "Enter z: " << std::endl;
     std::cin >> z; 
     std::cout << "Enter a: " << std::endl;
     std::cin >> a;
     std::cout << "Enter c: " << std::endl;
-    std::cin >> c; 
-    zint=(unsigned int)z & 0x80000000; 
-    switch(  zint ) {
-        case 0:
+    std::cin >> c;  
+    switch( z ) {
+        case 0 ... 0x7FFFFFFF:
                     x = 2 * z + 1;
                     f = 2 * x;
                     break;
